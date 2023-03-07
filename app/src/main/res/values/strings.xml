@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Ulka pay</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bdt_369875_00">BDT 369875.00</string>
+    <string name="active_balance">Active_balance</string>
+    <string name="add_money">Add Money</string>
+    <string name="case_out">case_out</string>
+    <string name="pay_now">pay_now</string>
+    <string name="recharge">Recharge</string>
+    <string name="pay_bills">Pay_bills</string>
+    <string name="send_money">send money</string>
+    <string name="electricity">Electricity</string>
+    <string name="gas">Gas</string>
+    <string name="water">Water</string>
+    <string name="education">Education</string>
+    <string name="internet">Internet</string>
+    <string name="credit_card">Credit card</string>
+    <string name="telephone">Telephone</string>
+    <string name="tv">Tv</string>
+    <string name="expenses">Expenses</string>
+    <string name="_2021_nov_01_2021_nov_01">2021_nov_01_2021_nov_01</string>
+    <string name="bdt9510_0">BDT9510.0</string>
+    <string name="_79_send_money">79% send_money</string>
+    <string name="_0_recharge">0% Recharge</string>
+    <string name="_20_recharge">20% Recharge</string>
+    <string name="home">Home</string>
+    <string name="tag">Tag</string>
+    <string name="setting">Setting</string>
+</resources>

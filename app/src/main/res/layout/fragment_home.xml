@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:weightSum="10"
+    tools:context=".HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3.2"
+        android:background="@color/blue1">
+
+        <TextView
+            android:id="@+id/headerAmountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/bdt_369875_00"
+            style="@style/styleHeaderTextTv"
+            />
+        <TextView
+            android:id="@+id/activeBalanceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headerAmountTV"
+            android:layout_marginStart="20dp"
+            android:text="@string/active_balance"
+            android:textSize="@dimen/_10ssp"
+            android:textAllCaps="true"
+            android:textColor="@color/white" />
+        <LinearLayout
+            android:id="@+id/headAddTkBtn"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_toEndOf="@+id/headerAmountTV"
+            android:background="@drawable/header_button_shape"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/ic_baseline_add_24"
+                android:backgroundTint="@color/blue1"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="@string/add_money"
+                android:textColor="@color/blue1"
+                android:textSize="@dimen/_15ssp" />
+        </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+
+            android:src="@drawable/ic__notifications_24"
+            />
+
+        <ImageView
+            android:id="@+id/sendMoneyIV"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:padding="@dimen/_15sdp"
+            android:background="@drawable/header_image_background"
+            android:src="@drawable/send"
+            android:layout_below="@+id/activeBalanceTv"/>
+        <TextView
+            android:id="@+id/sendMoneyTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send_money"
+            style="@style/styleHeaderTextTv"
+            android:textAllCaps="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:layout_below="@+id/sendMoneyIV"/>
+
+        <ImageView
+            android:id="@+id/caseOutIV"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:padding="@dimen/_15sdp"
+            android:background="@drawable/header_image_background"
+            android:src="@drawable/money"
+            android:layout_toRightOf="@+id/sendMoneyIV"
+            android:layout_below="@+id/activeBalanceTv"/>
+
+        <TextView
+            android:id="@+id/caseOutTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/caseOutIV"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_toRightOf="@+id/sendMoneyTV"
+            android:text="@string/case_out"
+            style="@style/styleHeaderTextTv"
+            android:textAllCaps="true" />
+
+        <ImageView
+            android:id="@+id/rechargeIV"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:padding="@dimen/_15sdp"
+            android:background="@drawable/header_image_background"
+            android:src="@drawable/transfer"
+            android:layout_toRightOf="@+id/caseOutIV"
+            android:layout_below="@+id/activeBalanceTv"/>
+
+        <TextView
+            android:id="@+id/rechargeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recharge"
+            style="@style/styleHeaderTextTv"
+            android:textAllCaps="true"
+            android:layout_marginStart="@dimen/_28sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_below="@+id/rechargeIV"
+            android:layout_toRightOf="@+id/caseOutTV"/>
+
+        <ImageView
+            android:id="@+id/payNowIV"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_below="@+id/activeBalanceTv"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="15dp"
+            android:layout_toRightOf="@+id/rechargeIV"
+            android:background="@drawable/header_image_background"
+            android:padding="@dimen/_15sdp"
+            android:src="@drawable/wallett" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/payNowIV"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_toRightOf="@+id/rechargeTV"
+            android:text="@string/pay_now"
+            style="@style/styleHeaderTextTv"
+            android:textAllCaps="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4.1"
+        android:background="@color/white2">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bodyPayBilTV"
+            android:text="@string/pay_bills"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            style="@style/stylePaybilTv"
+           />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_50sdp"
+            android:src="@drawable/ic_baseline_navigate_next_24" />
+
+        <ImageView
+            android:id="@+id/electricityIV"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@+id/bodyPayBilTV"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/paybil_image_background"
+            android:padding="@dimen/_15sdp"
+            android:src="@drawable/electricity" />
+
+        <TextView
+            android:id="@+id/electricityTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/electricity"
+            style="@style/styleBodyTextTv"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_below="@+id/electricityIV"/>
+
+        <ImageView
+            android:id="@+id/gasIV"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:padding="@dimen/_15sdp"
+            android:background="@drawable/paybil_image_background"
+            android:src="@drawable/gas"
+            android:layout_below="@+id/bodyPayBilTV"
+            android:layout_toRightOf="@+id/electricityIV"/>
+
+        <TextView
+            android:id="@+id/gasTV"
+            style="@style/styleBodyTextTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gasIV"
+            android:layout_marginStart="@dimen/_35sdp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_toRightOf="@+id/electricityTV"
+            android:text="@string/gas"
+            android:textSize="@dimen/_15ssp" />
+
+        <ImageView
+            android:id="@+id/waterIV"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:textAlignment="center"
+            android:padding="@dimen/_15sdp"
+            android:background="@drawable/paybil_image_background"
+            android:src="@drawable/water"
+            android:layout_toRightOf="@+id/gasIV"
+            android:layout_below="@+id/bodyPayBilTV"/>
+
+        <TextView
+            android:id="@+id/waterTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/waterIV"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_toRightOf="@+id/gasTV"
+            android:text="@string/water"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            style="@style/styleBodyTextTv" />
+
+        <ImageView
+            android:id="@+id/educationIV"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@+id/bodyPayBilTV"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_toRightOf="@+id/waterIV"
+            android:background="@drawable/paybil_image_background"
+            android:padding="@dimen/_15sdp"
+            android:src="@drawable/education" />
+
+        <TextView
+            style="@style/styleBodyTextTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/electricityIV"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_toRightOf="@+id/waterTV"
+            android:text="@string/education" />
+
+        <ImageView
+            android:id="@+id/internetIV"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@+id/electricityTV"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:background="@drawable/paybil_image_background"
+            android:padding="@dimen/_15sdp"
+            android:src="@drawable/internet" />
+
+        <TextView
+            android:id="@+id/internetTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/internet"
+           style="@style/styleBodyTextTv"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="35dp"
+            android:layout_below="@+id/internetIV"/>
+
+        <ImageView
+            android:id="@+id/creditCardIV"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:padding="@dimen/_15sdp"
+            android:background="@drawable/paybil_image_background"
+            android:src="@drawable/creditcard"
+            android:layout_below="@+id/electricityTV"
+            android:layout_toRightOf="@+id/electricityIV"/>
+
+        <TextView
+            android:id="@+id/creditCardTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/creditCardIV"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/internetTV"
+            android:text="@string/credit_card"
+            style="@style/styleBodyTextTv" />
+
+        <ImageView
+            android:id="@+id/telephoneIV"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:padding="@dimen/_15sdp"
+            android:background="@drawable/paybil_image_background"
+            android:src="@drawable/telephone"
+            android:layout_toRightOf="@+id/creditCardIV"
+            android:layout_below="@+id/electricityTV"/>
+
+        <TextView
+            android:id="@+id/telephoneTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/telephoneIV"
+            android:layout_marginStart="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:textAlignment="center"
+            android:layout_toRightOf="@+id/gasTV"
+            android:text="@string/telephone"
+            style="@style/styleBodyTextTv" />
+
+        <ImageView
+            android:id="@+id/tvIV"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@+id/electricityTV"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_toRightOf="@+id/waterIV"
+            android:background="@drawable/paybil_image_background"
+            android:padding="@dimen/_15sdp"
+            android:src="@drawable/television" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvIV"
+            android:layout_marginStart="@dimen/_55sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_toRightOf="@+id/waterTV"
+            android:text="@string/tv"
+            style="@style/styleBodyTextTv"/>
+
+    </RelativeLayout>
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="3"
+       android:layout_marginTop="10dp">
+
+       <androidx.cardview.widget.CardView
+           android:layout_width="match_parent"
+           android:layout_height="160dp"
+           app:cardCornerRadius="30dp"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="10dp"
+           app:cardBackgroundColor="@color/white2">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+
+               <TextView
+                   android:id="@+id/expensesTV"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="@dimen/_15sdp"
+                   android:layout_marginTop="@dimen/_8sdp"
+                   android:text="@string/expenses"
+                   android:textColor="@color/black"
+                   android:textSize="@dimen/_15ssp" />
+               <TextView
+                   android:id="@+id/dateTV"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/expensesTV"
+                   android:layout_marginStart="10dp"
+                   android:text="@string/_2021_nov_01_2021_nov_01"
+                   android:textColor="@color/black" />
+
+               <TextView
+                   android:id="@+id/bdtTV"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/dateTV"
+                   android:layout_marginLeft="15dp"
+                   android:layout_marginTop="8dp"
+                   android:text="@string/bdt9510_0"
+                   style="@style/styleBodyBdtTv" />
+
+               <org.eazegraph.lib.charts.PieChart
+                   android:id="@+id/pieChartIV"
+                   android:layout_width="@dimen/_70sdp"
+                   android:layout_height="@dimen/_70sdp"
+                   android:layout_marginStart="@dimen/_80sdp"
+                   android:layout_marginTop="@dimen/_10sdp"
+                   android:layout_toRightOf="@+id/dateTV"
+                   android:padding="10dp"
+                   android:visibility="visible"></org.eazegraph.lib.charts.PieChart>
+
+               <TextView
+                   android:id="@+id/bdtSendMoneyTV"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/bdtTV"
+                   android:layout_marginStart="@dimen/_10sdp"
+                   android:layout_marginTop="@dimen/_15sdp"
+                   android:background="@drawable/bdttext_background_shape"
+                   android:padding="@dimen/_8sdp"
+                   android:text="@string/_79_send_money"
+                   android:textColor="@color/black" />
+
+               <TextView
+                   android:id="@+id/bdtRechargeTV"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/bdtTV"
+                   android:layout_marginStart="@dimen/_10sdp"
+                   android:layout_marginTop="@dimen/_15sdp"
+                   android:layout_toRightOf="@+id/bdtSendMoneyTV"
+                   android:background="@drawable/bdttext_background_shape2"
+                   android:padding="@dimen/_8sdp"
+                   android:text="@string/_0_recharge"
+                   android:textColor="@color/black" />
+
+               <TextView
+                   android:id="@+id/bdtBilTV"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/bdtTV"
+                   android:layout_alignParentEnd="true"
+                   android:layout_marginStart="@dimen/_10sdp"
+                   android:layout_marginTop="@dimen/_15sdp"
+                   android:layout_marginEnd="10dp"
+                   android:layout_toRightOf="@+id/bdtRechargeTV"
+                   android:background="@drawable/bdttext_background_shape3"
+                   android:padding="@dimen/_8sdp"
+                   android:text="@string/_20_recharge"
+                   android:textColor="@color/black" />
+           </RelativeLayout>
+
+       </androidx.cardview.widget.CardView>
+
+   </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:elevation="@dimen/_10sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingEnd="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_15sdp"
+        android:weightSum="4"
+        tools:targetApi="lollipop">
+    <LinearLayout
+        android:id="@+id/homeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_weight="1"
+        android:background="@drawable/round_btombar_gackground"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_5sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_baseline_home_24" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="@string/home"
+            android:textColor="@color/blue3"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/clockLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_5sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/time" />
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Home"
+            android:textColor="@color/blue3"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_5sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/label" />
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="@string/tag"
+            android:textColor="@color/blue3"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_5sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_baseline_settings_24" />
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="@string/setting"
+            android:textColor="@color/blue3"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
